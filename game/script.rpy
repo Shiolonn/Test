@@ -5,6 +5,7 @@
 
 define I = Character("Ineesha")
 define N = Character("Nia")
+define P = Character("Priest")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
@@ -59,6 +60,24 @@ label managerlamancha:
 label bgcantomeow:
     scene bg cantomeow
     "You enter the church"
+    "Priest" "Hello, I am the priest of this church, how may I help you?"
+    "Priest" "I can see you are troubled, are you here to confess your sins?"
+
+    menu:
+        "How do you respond"
+        "Yes.. I am here to confess my sins":
+            jump confession
+
+        "No, I am here to seek guidance":
+            jump guidance
+
+label confession:
+    "Priest" "I see, please tell me what you have done."
+    "You confess your sins to the priest."
+
+label guidance: 
+    "Priest" "I see, please tell me what troubles you."
+
     # This ends the game.
 
     return
