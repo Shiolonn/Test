@@ -3,12 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define I = Character("Ineesha")
-define N = Character("Nia")
-define P = Character("Priest")
+define * = Character("Vampire", color="#830303")
+define P = Character("Priest", color="#114351")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
+image amusement
+image bg railway
 
 # The game starts here.
 
@@ -33,6 +34,46 @@ label start:
     "But there was one problem..."
     "The artifical blood bags may have fufilled their hunger, but it did not satisfy them."
     "The Vampires were growing restless with unsatisfaction..."
+
+"*" "Another day.. Another act…. I don’t know if I can keep this charade up any longer…
+A long time ago, I tried it: human blood, a satisfaction that can be matched by no other, yet every day, I cannot."
+"You look at the bright artificial lights in the amusement park that surrounds you,"
+
+label amusement:   
+    menu:
+        "Will you go on a ride?"
+
+        "Yes":
+            jump ride
+
+        "No":
+            jump walkaround
+
+label ride:
+    menu:
+        "Which ride do you want to go on?"
+
+        "Railway Ride":
+            jump railwayride
+
+        "Haunted House":
+            jump hauntedhouse
+
+label railwayride:
+    scene bg railway
+    "You enter the railway ride."
+    menu:
+        'Continue':
+            jump continue
+
+        "Go back":
+            jump goback
+
+label goback:
+    scene amusement
+        jump amusement
+
+label no:
 
     menu: 
         "How do you want to act"
