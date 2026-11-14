@@ -7,7 +7,7 @@ define I = Character("Ineesha")
 define N = Character("Nia")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
-
+image bg cantomeow = "cantomeow.webp"
 
 # The game starts here.
 
@@ -33,12 +33,18 @@ label start:
     "The artifical blood bags may have fufilled their hunger, but it did not satisfy them."
     "The Vampires were growing restless with unsatisfaction..."
 
-    menu:
-        "Bounce Back":
+    menu: 
+        "How do you want to act"
+
+        "Act upon it":
             jump bgroom
 
-        "Quit":
+        "Ignore it":
             jump managerlamancha
+
+        "Visit the priest":
+            jump bgcantomeow
+
 
 label bgroom:
     scene bg room
@@ -50,8 +56,9 @@ label managerlamancha:
     "You enter the manager's room."
     return
 
-
-
+label bgcantomeow:
+    scene bg cantomeow
+    "You enter the church"
     # This ends the game.
 
     return
