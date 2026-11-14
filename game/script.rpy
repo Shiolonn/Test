@@ -28,16 +28,21 @@ label start:
 
     menu:
         "Bounce Back":
-            scene bg room
+            jump bgroom
 
         "Quit":
             jump managerlamancha
 
+label bgroom:
+    scene bg room
+    "You enter the amusement park"
+    return
 
 label managerlamancha:
     scene bg managerlamancha
     "You enter the manager's room."
     return
+
 
 
     # This ends the game.
