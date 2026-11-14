@@ -4,7 +4,7 @@
 # name of the character.
 
 define I = Character("Ineesha")
-define B = Character("Ben")
+define N = Character("Nia")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 
@@ -20,10 +20,11 @@ label start:
 
     # These display lines of dialogue.
 
-    I "Ben?"
-    B "What?"
-    I "I like you.."
-    B "What...?"
+    I "nya?"
+    N "What?"
+    I "itch ni san.."
+    N "Hell no"
+    I "nya arigatouuu"
 
     menu:
         "Bounce Back":
@@ -32,7 +33,6 @@ label start:
         "Quit":
             jump managerlamancha
 
-if 'boun'
 
 label managerlamancha:
     scene bg managerlamancha
