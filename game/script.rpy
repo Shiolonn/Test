@@ -18,7 +18,7 @@ label start:
     # images directory to show it.
 
 
-    # These display lines of dialogue.
+    # Line of dialogue: our intro
 
     "A long long time ago…"
     "Vampires feasted on humans in the dark."
