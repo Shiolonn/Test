@@ -20,11 +20,18 @@ label start:
 
     # These display lines of dialogue.
 
-    I "nya?"
-    N "What?"
-    I "itch ni san.."
-    N "Hell no"
-    I "nya arigatouuu"
+    "A long long time ago…"
+    "Vampires feasted on humans in the dark."
+    "Years went by as this process repeated over and over." 
+    "humans feared vampires more than ever, but one was the cause for a major change in the life of the predator, and the prey."
+    "Both parties stepped into the light, paving way for many generations to come."
+    "Sick of being feared, the Vampires built a massive sanctuary for themselves, an amusement park, where they could live, alongside humans."
+    "And the final piece of the puzzle..."
+    "Artifical blood bags were created, allowing vampires to feed and fufill their hunger without harming humans."
+    "Life was finally coming together,"
+    "But there was one problem..."
+    "The artifical blood bags may have fufilled their hunger, but it did not satisfy them."
+    "The Vampires were growing restless with unsatisfaction..."
 
     menu:
         "Bounce Back":
