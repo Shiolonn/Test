@@ -11,13 +11,13 @@ image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
 image aumusement = "amusement.webp"
 image railway = "railway2.jpg"
-image church = "church.webp"
+image Church = "Church.jpg"
 default menuset = set() 
 default killcount = 0
 $ killcount = 0
 image vampire normal = 'priest2.png'
 image priest normal = 'vampire2.png'
-# The game starts here.
+# The game starts here. 
 
 label start: 
     
@@ -55,7 +55,7 @@ label amusement:
             jump event
 
         "No":
-            jump no
+            jump no3
 
 label event:
     menu:
@@ -240,8 +240,7 @@ label haunteddeath:
 
 label priest:
     scene Church
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     "You enter the church"
     "Priest" "Hello, I am the priest of this church, how may I help you?"
     "Priest" "I can see you are troubled, are you here to confess your sins?"
@@ -255,8 +254,7 @@ label priest:
             jump guidance
 
 label confession:
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     scene Church
     "Priest" "I see, please tell me what you have done. First, how intense is your desire for blood today?"
     menu:
@@ -272,22 +270,19 @@ label confession:
 
 
 label one:
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     "Priest" "I see, this is normal for a vampire. But you still must control your urges."
     "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
     jump no3
 
 label two:
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     "Priest" "I see, your state is not as bad as it could be. But you still must control your urges."
     "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
     jump no3
     
 label three:
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     "Priest" "I see, you are in a very bad state. I will help you, but you must promise to control your urges and not feed on humans again."
     "Priest" "Have you consumed artifical blood today?"
     "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
@@ -296,14 +291,14 @@ label three:
     
 
 label guidance: 
-    show vampire normal at left
-    show vampire normal at right
+    show priest normal at right
     "Priest" "I see, please tell me what troubles you."
     "You tell the priest about your urges to feed on humans, after a discussion, you leave the church"
     jump no3
 
 label ending:
     scene amusement
+    show priest normal at right
     "Priest" "I can see that you have fed on humans three times, this is a serious matter. You didn't control your urges and now there will be consequences."
     "You could not control your urges and got caught by the authorities and were sentenced to death for your crimes. Next time, think through your actions and control your urges."
     menu:
