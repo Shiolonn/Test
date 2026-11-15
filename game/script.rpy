@@ -10,6 +10,8 @@ image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
 image aumusement = "amusement.webp"
+image railway = "railway.webp"
+image church = "church.webp"
 default menuset = set()
 
 # The game starts here.
@@ -66,7 +68,7 @@ label event:
             jump parade
 
 label railwayride:
-    scene bg railway
+    scene railway
     "You enter the railway ride."
     menu:
         'Continue':
@@ -223,7 +225,7 @@ label haunteddeath:
             jump no3
 
 label priest:
-    scene bg cantomeow
+    scene Church
     "You enter the church"
     "Priest" "Hello, I am the priest of this church, how may I help you?"
     "Priest" "I can see you are troubled, are you here to confess your sins?"
@@ -237,6 +239,7 @@ label priest:
             jump guidance
 
 label confession:
+    scene Church
     "Priest" "I see, please tell me what you have done. First, how intense is your desire for blood today?"
     menu:
         "One for 'A little'":
