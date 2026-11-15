@@ -9,6 +9,7 @@ define H = Character("Human", color="#d8caa1")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
+image aumusement = "amusement.webp"
 default menuset = set()
 
 # The game starts here.
@@ -40,6 +41,7 @@ A long time ago, I tried it: human blood, a satisfaction that can be matched by 
 "You look at the bright artificial lights in the amusement park that surrounds you,"
 "You walk around the amusement park."
 label amusement:   
+    scene amusement
     menu:
         "Will you visit an attraction?"
 
@@ -96,7 +98,7 @@ label railwaydeath:
     jump amusement
 
 label act:
-    scene bg room
+    scene amusement
     "Walking around the park, you see a human. You feel a strong urge to feed on them."
     
     menu:
@@ -135,6 +137,7 @@ label no2:
 
 label away:
     "As you walk away, you think about the consequences of your actions. You feel a sense of guilt and shame for even considering feeding on a human."
+    scene amusement
     menu:
         "Will you visit the priest to confess your sins?"
 
@@ -146,7 +149,7 @@ label away:
 
 label no3:
     "Your unsatisfaction grows as you walk around the amusement park, looking for something to quench your thirst."
-
+    scene amusement
     menu: 
         "How do you want to act"
 
@@ -162,7 +165,7 @@ label no3:
 # label event
 
 label parade:
-    scene bg managerlamancha
+    scene amusement
     "You walk around the amusement park, and hear a buzz of voices."
     "As walk closer, the voices grow louder, and you hear laughter, and unified voices."
     "As you turn a corner, the source of all the sound reveals itself, a parade of humans and vampires, dancing and singing in unison."
