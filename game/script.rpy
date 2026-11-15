@@ -213,6 +213,7 @@ label paradekill:
     jump no3
 
 label hauntedhouse:
+    scene amusement
     "You enter the haunted house."
     "You walk around the haunted house, and you feel a sense of unease, with dripping running water disrupting your thoughts."
     "As you walk around, you see a human, and you feel a strong urge to feed on them."
