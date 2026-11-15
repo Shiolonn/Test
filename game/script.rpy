@@ -12,7 +12,9 @@ image bg cantomeow = "cantomeow.webp"
 image aumusement = "amusement.webp"
 image railway = "railway.webp"
 image church = "church.webp"
-default menuset = set()
+default menuset = set() 
+default killcount = 0
+$ killcount = 0
 
 # The game starts here.
 
@@ -97,6 +99,7 @@ label afterrailway:
 
 label railwaydeath:
     "In the dark of the ride, you feed on the human, and you feel a strong sense of satisfaction, but also a sense of guilt and shame for what you have done."
+    $ killcount += 1
     jump amusement
 
 label act:
@@ -126,6 +129,7 @@ label closer:
 label feed:
     "You feed on the human, and you feel a strong sense of satisfaction, and an overwhelming urge for more"
     "However, you also feel a sense of guilt and shame for what you have done."
+    $ killcount += 1
     menu:
         "Will you visit the priest to confess your sins?"
 
@@ -196,6 +200,7 @@ label paradekill:
     "You swiftly snatch a human from a parade into a dark alley."
     "Human" "Help! Somebody help me!"
     "You feed on the human, despite their cries, and you feel yourself getting more corrupted"
+    $ killcount += 1
     jump no3
 
 label hauntedhouse:
@@ -273,7 +278,11 @@ label three:
 
 label guidance: 
     "Priest" "I see, please tell me what troubles you."
+    "You tell the priest about your urges to feed on humans, after a discussion, you leave the church"
 
-    # This ends the game.
-
+if killcount == 3: 
+    "Priest" "I can see that you have fed on humans three times, this is a serious matter. You didn't control your urges and now there will be consequences."
+    scene black
+    "You could not control your urges and got caught by the authorities and were sentenced to death for your crimes. Next time, think through your actions and control your urges."
+    
     return
