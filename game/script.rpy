@@ -5,6 +5,7 @@
 
 define V = Character("Vampire", color="#830303")
 define P = Character("Priest", color="#114351")
+define H = Character("Human", color="#d8caa1")
 image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
@@ -176,7 +177,47 @@ label parade:
         "No":
             jump no3
 
+label paradedeath:
+    menu:
+        "You think to yourself, are you sure you want to do this?"
 
+        "Yes, go ahead with it":
+            jump paradekill
+
+        "No, I will not do it":
+            jump no3
+
+label paradekill:
+    "You swiftly snatch a human from a parade into a dark alley."
+    "Human" "Help! Somebody help me!"
+    "You feed on the human, despite their cries, and you feel yourself getting more corrupted"
+    jump no3
+
+label hauntedhouse:
+    "You enter the haunted house."
+    "You walk around the haunted house, and you feel a sense of unease, with dripping running water disrupting your thoughts."
+    "As you walk around, you see a human, and you feel a strong urge to feed on them."
+    
+    menu:
+        "What will you do?"
+
+        "Feed on the human":
+            jump haunteddeath
+
+        "Control your hunger and walk away":
+            jump no3
+
+label haunteddeath:
+    "You gain a strong sense of satisfaction, reverting to your old ways"
+
+    menu:
+        "Will you visit the priest to confess your sins?"
+
+        "Yes":
+            jump priest
+
+        "No":
+            jump no3
 
 label priest:
     scene bg cantomeow
@@ -193,8 +234,36 @@ label priest:
             jump guidance
 
 label confession:
-    "Priest" "I see, please tell me what you have done."
-    "You confess your sins to the priest."
+    "Priest" "I see, please tell me what you have done. First, how intense is your desire for blood today?"
+    menu:
+        "One for 'A little'":
+            jump one
+
+        "Two for 'A Lot'":
+            jump two
+
+        "Three for 'It's driving me insane'":
+            jump three
+
+
+
+label one:
+    "Priest" "I see, this is normal for a vampire. But you still must control your urges."
+    "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
+    jump no3
+
+label two:
+    "Priest" "I see, your state is not as bad as it could be. But you still must control your urges."
+    "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
+    jump no3
+    
+label three:
+    "Priest" "I see, you are in a very bad state. I will help you, but you must promise to control your urges and not feed on humans again."
+    "Priest" "Have you consumed artifical blood today?"
+    "After a discussion, the priest tells you that you must consume artifical blood to control your urges, and that you must not feed on humans again, or there will be consequences."
+    jump no3
+
+    
 
 label guidance: 
     "Priest" "I see, please tell me what troubles you."
