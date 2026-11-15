@@ -10,13 +10,13 @@ image bg room = "lamancha.webp"
 image bg managerlamancha = "managerlamancha.webp"
 image bg cantomeow = "cantomeow.webp"
 image aumusement = "amusement.webp"
-image railway = "railway.webp"
+image railway = "railway2.jpg"
 image church = "church.webp"
 default menuset = set() 
 default killcount = 0
 $ killcount = 0
-image vampire normal = 'Priest2.png'
-image priest normal = 'Vampire2.png'
+image vampire normal = 'priest2.png'
+image priest normal = 'vampire2.png'
 # The game starts here.
 
 label start: 
@@ -85,6 +85,7 @@ label railwayride:
             jump amusement
 
 label continue:
+    scene railway
     "You sit on the ride next to a human, they talk to you, friendly. Yet, you still feel an urge"
     "You discuss the events of the amusement park with the human, but your mind is elsewhere."
 
@@ -302,7 +303,6 @@ label guidance:
     jump no3
 
 label ending:
-if killcount == 3: 
     scene amusement
     "Priest" "I can see that you have fed on humans three times, this is a serious matter. You didn't control your urges and now there will be consequences."
     "You could not control your urges and got caught by the authorities and were sentenced to death for your crimes. Next time, think through your actions and control your urges."
